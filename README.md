@@ -22,4 +22,4 @@ A set of RISC-V example software projects are also available for these designs f
 The PolarFire Evaluation Kit includes an MPF300T FPGA. Details of the features of PolarFire Evaluation kit are available [here](https://www.microsemi.com/products/fpga-soc/design-resources/dev-kits/polarfire/polarfire-eval-kit).
 
 ### Target Mi-V CPU
-Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/Mi-V-CPUs).
+Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).

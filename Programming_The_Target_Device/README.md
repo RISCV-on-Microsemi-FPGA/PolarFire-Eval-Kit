@@ -7,17 +7,17 @@ Please note that you only need to install this standalone version of FlashPro Ex
 
 * PF_MIV_RV32IMA_L1_AHB_BaseDesign:
 
-   Flashpro Express project and Programming file for the Libero design [PF_MIV_RV32IMA_L1_AHB_BaseDesign](https://github.com/Mi-V-Ecosystem/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
+   Flashpro Express project and Programming file for the Libero design [PF_MIV_RV32IMA_L1_AHB_BaseDesign](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
 * PF_CoreRISCV_AXI4_BaseDesign:
 
-   Flashpro Express project and Programming file for the Libero design [PF_CoreRISCV_AXI4_BaseDesign](https://github.com/Mi-V-Ecosystem/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
+   Flashpro Express project and Programming file for the Libero design [PF_CoreRISCV_AXI4_BaseDesign](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
 * PF_CoreRISCV_AXI4_CoreBootStrap: 
 
-   Flashpro Express project and Programming file for the Libero design [PF_CoreRISCV_AXI4_CoreBootStrap](https://github.com/Mi-V-Ecosystem/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
+   Flashpro Express project and Programming file for the Libero design [PF_CoreRISCV_AXI4_CoreBootStrap](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
 
 ### Target Hardware
 Details of the features of PolarFire Evaluation kit are available [here](https://www.microsemi.com/products/fpga-soc/design-resources/dev-kits/polarfire/polarfire-eval-kit).
 
 ### Target Mi-V CPU
-Details of the features of Mi-V CPUs are available [here](https://github.com/Mi-V-Ecosystem/Mi-V-CPUs).
+Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
 
