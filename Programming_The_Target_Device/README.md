@@ -7,7 +7,7 @@ Please note that you only need to install this standalone version of FlashPro Ex
 
 * MIV_RV32IMA_L1_AHB_BaseDesign:
 
-   Flashpro Express project and Programming file for the Libero design [MIV_RV32IMA_L1_AHB_BaseDesign](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
+   Flashpro Express project and Programming file for the Libero design [PF_MIV_RV32IMA_L1_AHB_BaseDesign](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design)
 
 ### Target Hardware
 Details of the features of PolarFire Evaluation kit are available [here](https://www.microsemi.com/products/fpga-soc/design-resources/dev-kits/polarfire/polarfire-eval-kit).
