@@ -26,3 +26,8 @@ The PolarFire Evaluation Kit includes an MPF300T FPGA. Details of the features o
 
 ### Target Mi-V CPU
 Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
+
+### Modifying the Libero projects
+Some of the Libero projects use IP packages may not be  directly available from the Microsemi IP Catalog. These IP packages were created to speed up design creation by wrapping simple logic into reusable user IP packages.
+These user IP packages are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs/tree/master/Supporting-IPs).
+
