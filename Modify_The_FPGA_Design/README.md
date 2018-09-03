@@ -9,7 +9,7 @@ The FPGA designs include the following features:
 * RISC-V debug block allowing on-target debug using openocd/GDB
 * LSRAM for code/data
 * User peripherals such as GPIO, Timers, UART
-* Designs created with Libero capture 12.200.10.15
+* Designs created with Libero capture 12.200.30.10
 
 The memory map for each design is available within each Libero project.
 
@@ -17,12 +17,6 @@ The memory map for each design is available within each Libero project.
 * PF_MIV_RV32IMA_L1_AHB_BaseDesign:
 
    Allows software debugging using FlashPro5. The same JTAG port is used for programming the FPGA and debugging RISC-V software. Uses MIV_RV32IMA_L1_AHB soft processor.
-* PF_CoreRISCV_AXI4_BaseDesign:
-
-   Allows software debugging using FlashPro5. The same JTAG port is used for programming the FPGA and debugging RISC-V software. Uses legacy CoreRISCV_AXI4 soft processor.
-* PF_CoreRISCV_AXI4_CoreBootStrap:
-
-   Allows software debugging using FlashPro5. This also allows for booting from SPI Flash.The same JTAG port is used for programming the FPGA and debugging RISC-V software. Uses legacy CoreRISCV_AXI4 soft processor.
 
 ### Example Software Projects
 A set of RISC-V example software projects are also available for these designs from the SoftConsole [page](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole).
@@ -32,3 +26,8 @@ The PolarFire Evaluation Kit includes an MPF300T FPGA. Details of the features o
 
 ### Target Mi-V CPU
 Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
+
+### Modifying the Libero projects
+Some of the Libero projects use IP packages may not be  directly available from the Microsemi IP Catalog. These IP packages were created to speed up design creation by wrapping simple logic into reusable user IP packages.
+These user IP packages are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs/tree/master/Supporting-IPs).
+
