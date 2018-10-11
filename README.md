@@ -6,7 +6,7 @@ in order to start developping software for RISC-V.
 
 ### Modify The FPGA Design 
 The Modify_The_FPGA_Design folder contains Libero design projects. Libero is Microsemi's FPGA design tool. 
-You will need this tool if you wish to modify the example FPGA designs. Libero is available from [here](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads).
+You will need this tool if you wish to modify the example FPGA designs. Libero is available from [here](https://www.microsemi.com/product-directory/design-resources/3863-libero-soc-polarfire#downloads).
 
 ### Programming The Target Device
 The Programming_The_Target_Device folder includes FlashPro Express projects that can be used to program the 
