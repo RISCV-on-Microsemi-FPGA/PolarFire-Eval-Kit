@@ -25,7 +25,7 @@ to build from. If you're Libero's vault hasn't been updated in a while it could 
 
 ![Execute_Script](images/execute_script_1.jpg)
 
-**1.** Click the "..." button and enter the directory in which the main .tcl file is that you have downloaded with your sample project. This file
+1. Click the "..." button and enter the directory in which the main .tcl file is that you have downloaded with your sample project. This file
 is what Libero executes to build your design it should match the part id of the device on your hardware.
 2. Click Run to execute the script and build the design. Wait for Libero to finish building, a window should appear once the script execution is finished. By default the design will have a MiV_RV32IMA_L1_AHB Core. There are other options, if you're interested read below.
 
