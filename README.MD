@@ -25,9 +25,9 @@ to build from. If you're Libero's vault hasn't been updated in a while it could 
 
 ![Execute_Script](images/execute_script_1.jpg)
 
-1. Click the "..." button and enter the directory in which the main .tcl file is that you have downloaded with your sample project. This file
+**1.** Click the "..." button and enter the directory in which the main .tcl file is that you have downloaded with your sample project. This file
 is what Libero executes to build your design it should match the part id of the device on your hardware.
-2. Click Run to execute the script and build the design. Wait for Libero to finish building, a window should appear once the script execution is finished. By default the design will have a MiV_RV32IMA_L1_AHB Core. There are other options, if you're interested read below.
+**2.** Click Run to execute the script and build the design. Wait for Libero to finish building, a window should appear once the script execution is finished. By default the design will have a MiV_RV32IMA_L1_AHB Core. There are other options, if you're interested read below.
 
 #### Additional Builds
 -----------------------------
@@ -36,9 +36,9 @@ The design can also be built using a MiV_RV32IMA_L1_AXI Core by passing an argum
 
 ![Script's_Arguments](images/execute_script_2.jpg)
 
-1. Select the .tcl file that matches the part on your hardware.
-2. Type in an argument as shown in the image to build an 'AXI' based design. The arguments are not case sensitive, you can also type in 'AHB' to build a standard AHB based design.
-3. Click Run to execute the script and build the design.
+**1.** Select the .tcl file that matches the part on your hardware.
+**2.** Type in an argument as shown in the image to build an 'AXI' based design. The arguments are not case sensitive, you can also type in 'AHB' to build a standard AHB based design.
+**3.** Click Run to execute the script and build the design.
 
 #### (Optional) Further in the Design Flow
 --------------------------
@@ -47,9 +47,9 @@ There is also an optional 2nd argument that can be entered after the first one t
 
 ![Design_Flow](images/execute_script_3.jpg)
 
-1. Select the .tcl file that matches the part on your hardware.
-2. Type in an argument "AXI" or "AHB" depending on which MiV Core you want to use. This argument is required.
-3. Follow the first argument with a space and type in one of the four arguments, depending on how far you want your design built.
+**1.** Select the .tcl file that matches the part on your hardware.
+**2.** Type in an argument "AXI" or "AHB" depending on which MiV Core you want to use. This argument is required.
+**3.** Follow the first argument with a space and type in one of the four arguments, depending on how far you want your design built.
      - Synthesize
       - Place_and_Route
       - Generate_Bitstream
