@@ -54,18 +54,21 @@ There is also an optional 2nd argument that can be entered after the first one t
       - Place_and_Route
       - Generate_Bitstream
       - Generate_Programming_File
-   It is important that the two arguments are separated by a space or the script will fail to execute or will execute partially.
+      
+**Note**: It is important that the two arguments are separated by a space or the script will fail to execute or will execute partially.
+Once the programming file has been generated (.job), it will output to the FlashPro_Express_Projects folder where it will overwrite the default programming file. The file can be used to program the target device using the FlashPro Express.
 
 
 ### Programming the Device using FPExpress
 ---------------------------------------------
 
-The projects contain Programming Files on the same level as the .tcl script. These programming files can be used to program your target device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
-Please note that you only need to install this standalone version of FlashPro Express if you do not have Libero tools installed. The programming procedure is simple:
-1. Launch FPExpress and wait for it to load.
+The projects contain default build programming files in the **FlashPro_Express_Projects** there is a choice for an AXI or AHB Core based design. Each (.job) file is capapble of programming your target device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
+Please note that you only need to install this standalone version of FlashPro Express if you do not have Libero tools installed. (**Please download FlashPro Express for Libero v12.1**) The programming procedure is as follows:
+1. Power-up your board and connect it to your device running FlashPro Express.
+1. Launch FPExpress v12.1 and wait for it to load.
 2. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
 3. Navigate to your Job Programming File located inside your project folder beside your .tcl script.
-4. For your directory, select the directory in which the Job file was located in and click OK.
+4. For your directory, select the main project folder in which the .tcl file is located and click OK.
 5. On the next screen, from the bottom left drop-down menu select the PROGRAM option and clikc RUN. Wait for device to be programmed.
 
 ### Additional Notes
