@@ -1,15 +1,12 @@
-## PolarFire Evaluation Kit RISC-V Designs for Libero v12.1
+## PolarFire Evaluation Kit RISC-V Designs
 
-Sample Mi-V Libero projects for the PolarFire (MPF300T) Evaluation Kit.
+Sample Mi-V Libero projects for the PolarFire (MPF300T) Evaluation Kit and the PolarFire (MPF300T_ES) Evaluation Kit.
 
-To get your design download or clone this repository. The files consist of .tcl script files that are to be executed in Libero to build the design, the import folder contatining supporting files for building and the programming file which can be used to directly program hardware. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided. They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
+This repository contains Libero projects for FPGA designs including a RISC-V soft processor. The Programming bitstream(s) are also included so that you do not need to run through the full FPGA design flow in order to start developping software for RISC-V.
 
-**Note**: 
-* Unpack repository files to a file path not longer than 50 characters, as the project requires
-a lengthy file path and some OS systems have limits. **Not providing
-a sufficient file path for the project will result in errors**.
-* When a script is executed it **Downloads the Latest Available Cores** for Libero to ensure it has an accessible library of components
-to build from. If you're Libero's vault hasn't been updated in a while it could take some time.
+### Libero Projects
+
+The Libero Projects folder contains Libero design projects. Libero is Microsemi's FPGA design tool. You will need this tool if you wish to modify the sample FPGA designs. This project supports Libero v12.1 only and it can be downloaded from here(https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads)
 
 ### Instructions for Building the Design
 -------------
