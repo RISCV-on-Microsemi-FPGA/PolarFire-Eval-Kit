@@ -6,7 +6,7 @@ This repository contains Libero projects for FPGA designs including a RISC-V sof
 
 ### Libero Projects
 
-The Libero Projects folder contains Libero design projects. Libero is Microsemi's FPGA design tool. You will need this tool if you wish to modify the sample FPGA designs. This project supports Libero v12.1 only and it can be downloaded from here(https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads)
+The Libero Projects folder contains Libero design projects. Libero is Microsemi's FPGA design tool. You will need this tool if you wish to modify the sample FPGA designs. This project supports Libero v12.1 only and it can be downloaded from [here](https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads)
 
 ### Instructions for Building the Design
 -------------
