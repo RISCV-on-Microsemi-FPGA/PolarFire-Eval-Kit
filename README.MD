@@ -1,20 +1,23 @@
-## PolarFire Evaluation Kit RISC-V Designs
+## PolarFire Evaluation Kit RISC-V Designs for Libero v12.1
 
-Sample Mi-V Libero projects for the PolarFire (MPF300T) Evaluation Kit and the PolarFire (MPF300T_ES) Evaluation Kit.
+Sample Mi-V Libero projects for the PolarFire (MPF300T) and (MPF300T_ES) Evaluation Kits.
 
-This repository contains Libero projects for FPGA designs including a RISC-V soft processor. The Programming bitstream(s) are also included so that you do not need to run through the full FPGA design flow in order to start developping software for RISC-V.
+To get your design download or clone this repository. The files consist of .tcl script files that are to be executed in Libero to build the design, the import folder contatining supporting files for building and the programming file which can be used to directly program hardware. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided. They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
 
-### Libero Projects
+**Note**: 
+* Unpack repository files to your main Microsemi folder e.g. C:\Microsemi\ to keep the file path short, as the project requires
+a lengthy file path and some OS systems have limits. **Not providing
+a sufficient file path for the project will result in errors**.
+* Make sure you have the latest Libero Cores in your vault. Select Catalog tab from the left hand side toolbar and check if the "Download Latest Cores" option is available by a yellow marked area then click it. This option will only be visible if you don't have the lates cores in the vault. If the vault hasn't been updated in a while this could take some time. Not having the library of cores required for the design to be built will cause errors.
 
-The Libero Projects folder contains Libero design projects. Libero is Microsemi's FPGA design tool. You will need this tool if you wish to modify the sample FPGA designs. This project supports Libero v12.1 only and it can be downloaded from [here](https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads)
 
 ### Instructions for Building the Design
 -------------
 
-- Launch Libero v12.1 on your computer. Wait for Libero to start.
+- Launch Libero v12.1 on your computer. Wait for Libero to start, make sure you have the latest Libero cores downloaded.
 - Examine the part on your hardware board, and try to match it with the right .tcl file.
 - In Libero Press "CTRL+U" to display the "Execute Script" menu. Alternatively, click Project from the top left hand corner of Libero Suite and select "Execute Script" from there.
-- Examine the image below, the purpose of the marked fields is listed.
+- Follow the instructions below and refer to the images to build the design.
 
 
 #### Simple Build
@@ -72,8 +75,8 @@ Please note that you only need to install this standalone version of FlashPro Ex
 -------------------------
 
 - The project is built in the same folder as the script.
+- Once a project is built, to re-run the script for that design again it has to be open.
 - If you stop the execution of a the script halfway the project can get corrupted. If this happens, delete the project folder created by Libero and execute the script again, otherwise just try running the script again.
-- The arguments serve the purpose to take the user further down the design flow, they use the most optimal settings for design build.
+- The design flow arguments serve the purpose to take the user further down the design flow, they use the most optimal settings for design build.
 - Use the argument "Place_and_Route" or any argument after; The design will be built using an optimal place and route seed so, that the design's signal data path doesn't cause timing violations.
-- If you don't feel like building a design to program the board, you can find the exported bitstream files in the project's folder.
-- Only one argument can be entered and no spaces are allowed. The arguments are not case sensitive, if no argument is entered the sample design will be fully built to pre-synthesis stage.
+- If you don't feel like building a design to program the board, you can find the exported programming files in FlashPro_Express_Project folder.
