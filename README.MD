@@ -1,4 +1,4 @@
-## PolarFire Evaluation Kit RISC-V Designs for Libero v12.1
+## PolarFire Evaluation Kit RISC-V Designs
 
 Sample Mi-V Libero projects for the PolarFire (MPF300T) and (MPF300T_ES) Evaluation Kits.
 
