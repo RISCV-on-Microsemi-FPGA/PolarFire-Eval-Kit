@@ -118,8 +118,6 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "-------------------------------------------------------------------------"
 
 	configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:true} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
-	run_tool -name {PLACEROUTE}
-	run_tool -name {VERIFYTIMING}
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
     save_project
@@ -130,13 +128,13 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "-------------------------------------------------------------------------"
 
 	configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:true} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
-	run_tool -name {PLACEROUTE}
-	run_tool -name {VERIFYTIMING}
+    run_tool -name {GENERATEPROGRAMMINGDATA}
+    run_tool -name {GENERATEPROGRAMMINGFILE}
 
 	if {"$target" == "AHB"} then {
 		export_prog_job \
 			-job_file_name {BaseDesign_MPF300T_ES-AHB-ProgramFile} \
-			-export_dir {./FlashPro_Express_Projects} \
+			-export_dir {./../FlashPro_Express_Projects/Programming_Files} \
 			-bitstream_file_type {TRUSTED_FACILITY} \
 			-bitstream_file_components {}
 		save_project
@@ -144,7 +142,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	} else {
 		export_prog_job \
 			-job_file_name {BaseDesign_MPF300T_ES-AXI-ProgramFile} \
-			-export_dir {./FlashPro_Express_Projects} \
+			-export_dir {./../FlashPro_Express_Projects/Programming_Files} \
 			-bitstream_file_type {TRUSTED_FACILITY} \
 			-bitstream_file_components {}
 		save_project
