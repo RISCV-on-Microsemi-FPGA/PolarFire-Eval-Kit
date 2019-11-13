@@ -12,8 +12,8 @@ The Libero_Projects folder contains the .tcl scripts that build the Libero desig
 
 #### Design Features
 The FPGA designs include the following features:
-* Uses MIV_RV32IMA_L1_AHB or MIV_RV32IMA_L1_AXI processor
-* Support for Engineering Sample FPGA
+* Uses MIV_RV32IMA_L1_AHB or MIV_RV32IMA_L1_AXI soft processor
+* Support for Engineering Sample FPGA (MPF300T_ES)
 * RISC-V debug block allowing on-target debug using openocd/GDB
 * LSRAM for code/data
 * User peripherals such as GPIO, Timers, UART
