@@ -2,7 +2,7 @@
 
 Sample Mi-V Libero projects for the PolarFire (MPF300T and MPF300T_ES) Evaluation Kits.
 
-To get your design download or clone this repository. The files consist of .tcl script files that are to be executed in Libero to build the design, the import folder contatining supporting files for building and the programming file which can be used to directly program hardware. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided. They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
+To get your design download or clone this repository. The .tcl script file needs to be executed in Libero to build the design using the import folder data. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided [here](FlashPro_Express_Projects). They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
 
 **Note**: 
 * Unpack repository files to your main Microsemi folder e.g. C:\Microsemi\ to keep the file path short, as the project requires
