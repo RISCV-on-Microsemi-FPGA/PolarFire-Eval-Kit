@@ -20,6 +20,8 @@ The FPGA designs include the following features:
 * Designs created with Libero v12.1
 
 #### Projects
+A choice of two Libero projects, each containing either MiV Core:
+
 * MiV_RV32IMA_L1_AHB
 * MiV_RV32IMA_L1_AXI
 
