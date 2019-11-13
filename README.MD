@@ -34,8 +34,9 @@ Please note that you only need to install this standalone version of FlashPro Ex
 A set of RISC-V example software projects are also available for these designs from the SoftConsole [page](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole).
 
 ### Target Hardware
-The PolarFire Evaluation Kit includes an MPF300T FPGA or an MPF300T_ES. Details of the features of PolarFire Evaluation kit are available (MPF300T) [here](https://www.microsemi.com/existing-parts/parts/150789)
-or (MPF300T_ES) [here](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit).
+The PolarFire Evaluation Kit includes MPF300T FPGA or MPF300T_ES FPGA. Details of the features of PolarFire Evaluation kit:
+* (MPF300T) [here](https://www.microsemi.com/existing-parts/parts/150789)
+* (MPF300T_ES) [here](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit).
 
 ### Target Mi-V CPU
 Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
