@@ -16,8 +16,9 @@ Please note that you only need to install this standalone version of FlashPro Ex
 6. On the next screen, from the bottom left drop-down menu select the PROGRAM option and clikc RUN. Wait for device to be programmed.
 
 ### Target Hardware
-The PolarFire Evaluation Kit includes an MPF300T FPGA or an MPF300T_ES. Details of the features of PolarFire Evaluation kit are available (MPF300T) [here](https://www.microsemi.com/existing-parts/parts/150789)
-or (MPF300T_ES) [here](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit).
+The PolarFire Evaluation Kit includes MPF300T FPGA or MPF300T_ES FPGA. Details of the features of PolarFire Evaluation kit:
+* MPF300-EVAL-KIT (MPF300T) [here](https://www.microsemi.com/existing-parts/parts/150789)
+* MPF300-EVAL-KIT-ES (MPF300T_ES) [here](https://www.microsemi.com/existing-parts/parts/138273).
 
 ### Target Mi-V CPU
 Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
