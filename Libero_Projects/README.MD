@@ -2,7 +2,7 @@
 
 Sample Mi-V Libero projects for the PolarFire (MPF300T and MPF300T_ES) Evaluation Kits.
 
-To get your design download or clone this repository. The .tcl script file needs to be executed in Libero to build the design using the import folder data. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided [here](FlashPro_Express_Projects). They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
+To get your design download or clone this repository. The .tcl script file needs to be executed in Libero to build the design using the import folder data. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided in FlashPro_Express_Projects. They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
 
 **Note**: 
 * Unpack repository files to your main Microsemi folder e.g. C:\Microsemi\ to keep the file path short, as the project requires
@@ -62,7 +62,7 @@ Once the programming file has been generated (.job), it will output to the Flash
 -------------------------
 
 - The project is built in the same folder as the script.
-- Once a project is built, to re-run the script for that design again it has to be open.
+- Once a project is built, to re-run the script for that design again, it has to be open.
 - If you stop the execution of a the script halfway the project can get corrupted. If this happens, delete the project folder created by Libero and execute the script again, otherwise just try running the script again.
 - The design flow arguments serve the purpose to take the user further down the design flow, they use the most optimal settings for design build.
 - Use the argument "Place_and_Route" or any argument after; The design will be built using an optimal place and route seed so, that the design's signal data path doesn't cause timing violations.
