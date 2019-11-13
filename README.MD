@@ -26,15 +26,19 @@ The FPGA designs include the following features:
 Both of the designs allow software debugging using FlashPro5. The same JTAG port is used for programming the FPGA and debugging RISC-V software. Selection of MIV_RV32IMA_L1_AHB and MiV_RV32IMA_L1_AXI soft processors.
 
 ### FlashPro Express Projects
+---------------------
 The FlashPro_Express_Projects folder includes the FlashPro Express programming files that can be used to program the development board's FPGA. A standalone installer for FlashPro Express is available [here](http://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software). 
 Please note that you only need to install this standalone version of FlashPro Express if you don't have Libero tools installed. FlashPro Express has to match the version of Libero, the programming files were generated in.
 
 ### SoftConsole Projects
+-----------------------
 A set of RISC-V example software projects are also available for these designs from the SoftConsole [page](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole).
 
 ### Target Hardware
+-------------------
 The PolarFire Evaluation Kit includes an MPF300T FPGA or an MPF300T_ES. Details of the features of PolarFire Evaluation kit are available (MPF300T) [here](https://www.microsemi.com/existing-parts/parts/150789)
 or (MPF300T_ES) [here](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit).
 
 ### Target Mi-V CPU
+--------------------
 Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
