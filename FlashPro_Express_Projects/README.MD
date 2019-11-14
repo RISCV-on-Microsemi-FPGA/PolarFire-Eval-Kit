@@ -8,12 +8,14 @@ Please note that you only need to install this standalone version of FlashPro Ex
 
 ### Programming the Device using FPExpress
 ---------------------------------------------
-1. Power-up your board and connect it to your device running FlashPro Express.
-2. Launch FPExpress v12.1 and wait for it to load.
-3. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
-4. Navigate to your Job Programming File located inside your project folder beside your .tcl script.
-5. For your directory, select the main project folder in which the .tcl file is located and click OK.
-6. On the next screen, from the bottom left drop-down menu select the PROGRAM option and clikc RUN. Wait for device to be programmed.
+1. Download or Clone this repository to get the contents of FlashPro_Express_Projects.
+2. Power-up your board and connect it to your programming device running FlashPro Express.
+3. Launch FPExpress v12.1 and wait for it to load.
+4. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
+5. For "Programming job file:" navigate to your FlashPro_Express_Project/Programming_Files directory and select the (.job) programming file you want to program your board with.
+6. For "FlashPro Express job project location:" select the FlashPro_Express_Projects folder you have downloaded with this project.
+8. Click OK, wait for the new window to pop-up.
+7. From the bottom left drop-down menu select the PROGRAM option if it's not selected by default and click RUN. Wait for device to be programmed.
 
 ### Target Hardware
 The PolarFire Evaluation Kit includes MPF300T FPGA or MPF300T_ES FPGA. Details of the features of PolarFire Evaluation kit:
