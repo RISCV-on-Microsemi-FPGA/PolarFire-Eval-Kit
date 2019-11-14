@@ -9,8 +9,8 @@ Please note that you only need to install this standalone version of FlashPro Ex
 ### Programming the Device using FPExpress
 ---------------------------------------------
 1. Download or Clone this repository to get the contents of FlashPro_Express_Projects.
-2. Power-up your board and connect it to your programming device running FlashPro Express.
-3. Launch FPExpress v12.1 and wait for it to load.
+2. Power-up your board and connect it to your computer.
+3. Launch FlashPro Express v12.1 and wait for it to load.
 4. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
 5. For "Programming job file:" navigate to your FlashPro_Express_Project/Programming_Files directory and select the (.job) programming file you want to program your board with.
 6. For "FlashPro Express job project location:" select the FlashPro_Express_Projects folder you have downloaded with this project.
