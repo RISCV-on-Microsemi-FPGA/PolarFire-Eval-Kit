@@ -3,7 +3,7 @@
 Sample Mi-V FlashPro Express files for the PolarFire (MPF300T and MPF300T_ES) Evaluation Kit.
 
 ### FlashPro Express
-This folder contains default build, exported programming files, there is a choice to use an AXI or AHB Core based design. Either (.job) file can be used to program your target device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
+The programming files contained here are exported from Libero projects and their configurations found in this repository. Select the desired programming .job file and program your device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
 
 **Note:**
 Please note that you only need to install this standalone version of FlashPro Express for Libero v12.1 if you do not have Libero tools installed. The programming procedure is as follows:
