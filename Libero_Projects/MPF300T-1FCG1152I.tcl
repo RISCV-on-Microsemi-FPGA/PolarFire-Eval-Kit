@@ -58,7 +58,7 @@ if {"$target" == "AXI"} then {
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------SUCCESS!----------------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts "-----------------------------Project Built-------------------------------"
+		puts "----------------------------BaseDesign Built-----------------------------"
 		puts "-------------------------------------------------------------------------"
 	}
 } elseif {"$target" == "AHB"} then {
@@ -72,7 +72,7 @@ if {"$target" == "AXI"} then {
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------SUCCESS!----------------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts "-----------------------------Project Built-------------------------------"
+		puts "----------------------------BaseDesign Built-----------------------------"
 		puts "-------------------------------------------------------------------------"
 	}
 } else {
@@ -86,11 +86,14 @@ if {"$target" == "AXI"} then {
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------SUCCESS!----------------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts "-----------------------------Project Built-------------------------------"
+		puts "----------------------------BaseDesign Built-----------------------------"
 		puts "-------------------------------------------------------------------------"
 	}
 }
 
+# Configuring Place_and_Route tool for a timing pass.
+configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:true} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
+# ##
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "-------------------------------------------------------------------------"
@@ -99,16 +102,23 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 
     run_tool -name {SYNTHESIZE}
     save_project
+
+    puts "-------------------------------------------------------------------------"
+    puts "---------------------------SYNTHESIZED!----------------------------------"
+    puts "-------------------------------------------------------------------------"
 	
 } elseif {"$design_flow_stage" == "PLACE_AND_ROUTE"} then {
     puts "-------------------------------------------------------------------------"
     puts "--------------------------PLACE AND ROUTE--------------------------------"
     puts "-------------------------------------------------------------------------"
 	
-	configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:true} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
 	run_tool -name {PLACEROUTE}
 	run_tool -name {VERIFYTIMING}
 	save_project
+	
+    puts "-------------------------------------------------------------------------"
+    puts "----------------------DESIGN PLACED AND ROUTED!--------------------------"
+    puts "-------------------------------------------------------------------------"
 
 	
 } elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
@@ -116,19 +126,24 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "--------------------GENERATING PROGRAMMING FILES-------------------------"
     puts "-------------------------------------------------------------------------"
 
-	configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:true} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
     save_project
+	
+    puts "-------------------------------------------------------------------------"
+    puts "--------------------PROGRAMMING FILES GENERATED!-------------------------"
+    puts "-------------------------------------------------------------------------"
+
 
 } elseif {"$design_flow_stage" == "EXPORT_PROGRAMMING_FILE"} then {
     puts "-------------------------------------------------------------------------"
     puts "----------------------EXPORT PROGRAMMING FILES---------------------------"
     puts "-------------------------------------------------------------------------"
 
-	configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:true} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
+# pre-requisite to enable exporting programming file function
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
+# ##
 
 	if {"$target" == "AHB"} then {
 		export_prog_job \
@@ -147,11 +162,15 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 		save_project
 	}
 	
+    puts "-------------------------------------------------------------------------"
+    puts "--------------------PROGRAMMING FILES EXPORTED!--------------------------"
+    puts "-------------------------------------------------------------------------"
+
 } else {
     puts "-------------------------------------------------------------------------"
 	puts "-------------------------------------------------------------------------"
-	puts "-----------------------WRONG ARGUMENT ENTERED!---------------------------"
-	puts "-------------------------------------------------------------------------"
+	puts "-----------------NO VALID DESIGN FLOW ARGUMENT ENTERED!------------------"
+	puts "--------------------------(this is optional)-----------------------------"
 	puts "-------------------------------------------------------------------------"
 }
 
@@ -160,24 +179,9 @@ puts ""
 puts ""
 puts ""
 puts ""
-puts ""
-puts "-------------------------------------------------------------------------"
-puts "-----------------------------Project Built-------------------------------"
 puts "-------------------------------------------------------------------------"
 puts "-------------------------------------------------------------------------"
-puts "This script can also be executed to progress in the design flow"
-puts "In order to do this, open the execute script menu and select the .tcl file"
-puts "then in arguments section enter one of the following arguments to progress"
-puts "in the design flow:         "                                           
-puts ""                                                                   
-puts " 1. SYNTHESIZE "
-puts " 2. PLACE_AND_ROUTE"
-puts " 3. GENERATE_BITSTREAM"
-puts " 4. EXPORT_PROGRAMMING_FILE"
-puts ""
-puts "                  "
-puts "These arguments are not case sensitive, but require an underscore between words instead of space"
-puts "Sample designs are provided with place and route seeds that will allow user"
-puts "to build the design quickly without the need route the design manually"
-puts "using the 'PLACE_AND_ROUTE' argument will build the design with the best seed"	
-	
+puts "----------------------SCRIPT EXECUTED SUCCESSFULLY!----------------------"
+puts "-------------------------------------------------------------------------"
+puts "-------------------------------------------------------------------------"
+
