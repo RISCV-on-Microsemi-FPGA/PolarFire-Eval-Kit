@@ -13,7 +13,7 @@ auto_promote_pad_pins -promote_all 0
 # #################################################################################################################################################################
 # Exporting core CCC to TCL
 # Exporting Create design command for core CCC
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:1.1.101} -component_name {CCC_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.1.104} -component_name {CCC_0} -params {\
 "DLL_CLK_0_BANKCLK_EN:false"  \
 "DLL_CLK_0_DEDICATED_EN:false"  \
 "DLL_CLK_0_FABCLK_EN:false"  \
@@ -866,7 +866,7 @@ HIGH_RESET_12:true" "TGT_ACTIVE_HIGH_RESET_13:true" "TGT_ACTIVE_HIGH_RESET_14:tr
 # ###################################################################################################################################################################
 # Exporting core PF_SRAM_AHBL_AXI_C1 to TCL
 # Create design TCL command for core PF_SRAM_AHBL_AXI_C1
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.1.135} -component_name {PF_SRAM_AHBL_AXI_C1} -params {\
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.2.101} -component_name {PF_SRAM_AHBL_AXI_C1} -params {\
 "AXI4_AWIDTH:32" \
 "AXI4_DWIDTH:32" \
 "AXI4_IDWIDTH:8" \
