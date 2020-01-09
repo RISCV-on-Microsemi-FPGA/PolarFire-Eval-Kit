@@ -13,7 +13,7 @@ auto_promote_pad_pins -promote_all 0
 # #################################################################################################################################################################
 # Exporting core CCC to TCL
 # Exporting Create design command for core CCC
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.1.104} -component_name {CCC_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_name {CCC_0} -params {\
 "DLL_CLK_0_BANKCLK_EN:false"  \
 "DLL_CLK_0_DEDICATED_EN:false"  \
 "DLL_CLK_0_FABCLK_EN:false"  \
