@@ -1,4 +1,4 @@
-## PolarFire Evaluation Kit RISC-V FlashPro Express Programming Files (Libero v12.2)
+## PolarFire Evaluation Kit RISC-V FlashPro Express Programming Files (Libero v12.3)
 
 Sample Mi-V FlashPro Express files for the PolarFire (MPF300T and MPF300T_ES) Evaluation Kit.
 
@@ -6,13 +6,13 @@ Sample Mi-V FlashPro Express files for the PolarFire (MPF300T and MPF300T_ES) Ev
 The programming files contained here are exported from Libero projects and their configurations found in this repository. Select the desired programming .job file and program your device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
 
 **Note:**
-Please note that you only need to install this standalone version of FlashPro Express for Libero v12.2 if you do not have Libero tools installed. The programming procedure is as follows:
+Please note that you only need to install this standalone version of FlashPro Express for Libero v12.3 if you do not have Libero tools installed. The programming procedure is as follows:
 
 ### Programming the Device using FPExpress
 ---------------------------------------------
 1. Download or Clone this repository to get the contents of FlashPro_Express_Projects.
 2. Power-up your board and connect it to your computer.
-3. Launch FlashPro Express v12.2 and wait for it to load.
+3. Launch FlashPro Express v12.3 and wait for it to load.
 4. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
 5. For "Programming job file:" navigate to your FlashPro_Express_Project/Programming_Files directory and select the (.job) programming file you want to program your board with.
 6. For "FlashPro Express job project location:" select the FlashPro_Express_Projects folder you have downloaded with this project.
