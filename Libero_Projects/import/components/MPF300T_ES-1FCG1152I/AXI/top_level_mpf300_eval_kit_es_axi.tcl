@@ -8,11 +8,9 @@ create_smartdesign -sd_name ${sd_name}
 # Disable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 0
 
-# #################################################################################################################################################################
-
 # CCC
 # ########
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_name {CCC_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_name {PF_CCC_0} -params {\
 "DLL_CLK_0_BANKCLK_EN:false"  \
 "DLL_CLK_0_DEDICATED_EN:false"  \
 "DLL_CLK_0_FABCLK_EN:false"  \
@@ -768,7 +766,7 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AXI:2.1.100} 
 "MEM_WID:5" \
 "MMIO_WID:5" \
 "RESET_VECTOR_ADDR_0:0x0" \
-"RESET_VECTOR_ADDR_1:0x8000"} 
+"RESET_VECTOR_ADDR_1:0x6000"} 
 # ############################
 
 
@@ -808,8 +806,80 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXITOAHBL:3.4.100} -c
 # ##################
 
 
-# Add AND2_0 instance
-sd_instantiate_macro -sd_name ${sd_name} -macro_name {AND2} -instance_name {AND2_0}
+# PF_INIT_MONITOR
+# ################################
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_INIT_MONITOR:2.0.104} -component_name {PF_INIT_MONITOR_0} -params {\
+"BANK_0_CALIB_START_ENABLED:false" \
+"BANK_0_CALIB_STATUS_ENABLED:false" \
+"BANK_0_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_0_VDDI_STATUS_ENABLED:false" \
+"BANK_0_VDDI_STATUS_SIMULATION_DELAY:1" \
+"BANK_1_CALIB_START_ENABLED:false" \
+"BANK_1_CALIB_STATUS_ENABLED:false" \
+"BANK_1_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_1_VDDI_STATUS_ENABLED:false" \
+"BANK_1_VDDI_STATUS_SIMULATION_DELAY:1" \
+"BANK_2_CALIB_START_ENABLED:false" \
+"BANK_2_CALIB_STATUS_ENABLED:false" \
+"BANK_2_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_2_VDDI_STATUS_ENABLED:false" \
+"BANK_2_VDDI_STATUS_SIMULATION_DELAY:1" \
+"BANK_4_CALIB_START_ENABLED:false" \
+"BANK_4_CALIB_STATUS_ENABLED:false" \
+"BANK_4_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_4_VDDI_STATUS_ENABLED:false" \
+"BANK_4_VDDI_STATUS_SIMULATION_DELAY:1" \
+"BANK_5_CALIB_START_ENABLED:true" \
+"BANK_5_CALIB_STATUS_ENABLED:true" \
+"BANK_5_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_5_VDDI_STATUS_ENABLED:false" \
+"BANK_5_VDDI_STATUS_SIMULATION_DELAY:1" \
+"BANK_6_CALIB_START_ENABLED:true" \
+"BANK_6_CALIB_STATUS_ENABLED:true" \
+"BANK_6_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_6_VDDI_STATUS_ENABLED:false" \
+"BANK_6_VDDI_STATUS_SIMULATION_DELAY:1" \
+"BANK_7_CALIB_START_ENABLED:true" \
+"BANK_7_CALIB_STATUS_ENABLED:true" \
+"BANK_7_CALIB_STATUS_SIMULATION_DELAY:1" \
+"BANK_7_VDDI_STATUS_ENABLED:false" \
+"BANK_7_VDDI_STATUS_SIMULATION_DELAY:1" \
+"DEVICE_INIT_DONE_SIMULATION_DELAY:7" \
+"FABRIC_POR_N_SIMULATION_DELAY:1" \
+"PCIE_INIT_DONE_SIMULATION_DELAY:4" \
+"SHOW_BANK_0_CALIB_START_ENABLED:true" \
+"SHOW_BANK_0_CALIB_STATUS_ENABLED:true" \
+"SHOW_BANK_0_VDDI_STATUS_ENABLED:true" \
+"SHOW_BANK_1_CALIB_START_ENABLED:true" \
+"SHOW_BANK_1_CALIB_STATUS_ENABLED:true" \
+"SHOW_BANK_1_VDDI_STATUS_ENABLED:true" \
+"SHOW_BANK_2_CALIB_START_ENABLED:true" \
+"SHOW_BANK_2_CALIB_STATUS_ENABLED:true" \
+"SHOW_BANK_2_VDDI_STATUS_ENABLED:true" \
+"SHOW_BANK_4_CALIB_START_ENABLED:true" \
+"SHOW_BANK_4_CALIB_STATUS_ENABLED:true" \
+"SHOW_BANK_4_VDDI_STATUS_ENABLED:true" \
+"SHOW_BANK_5_CALIB_START_ENABLED:false" \
+"SHOW_BANK_5_CALIB_STATUS_ENABLED:false" \
+"SHOW_BANK_5_VDDI_STATUS_ENABLED:false" \
+"SHOW_BANK_6_CALIB_START_ENABLED:false" \
+"SHOW_BANK_6_CALIB_STATUS_ENABLED:false" \
+"SHOW_BANK_6_VDDI_STATUS_ENABLED:false" \
+"SHOW_BANK_7_CALIB_START_ENABLED:false" \
+"SHOW_BANK_7_CALIB_STATUS_ENABLED:false" \
+"SHOW_BANK_7_VDDI_STATUS_ENABLED:false" \
+"SRAM_INIT_DONE_SIMULATION_DELAY:6" \
+"USRAM_INIT_DONE_SIMULATION_DELAY:5"	} 
+# ###############################################
+#
+# CORERESET_PF
+# ####################
+create_and_configure_core -core_vlnv {Actel:DirectCore:CORERESET_PF:2.2.107} -component_name {CORERESET_PF_0} -params {} 
+# ####################
+
+
+# ########################################################################################
+
 
 
 # Add CoreAXItoAHBL_0
@@ -820,8 +890,8 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {COREAXITOAHBL_0} -
 sd_instantiate_component -sd_name ${sd_name} -component_name {COREAXITOAHBL_1} -instance_name {COREAXITOAHBL_1} 
 
 
-# Add CCC_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {CCC_0} -instance_name {CCC_0}
+# Add PF_CCC_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {PF_CCC_0} -instance_name {PF_CCC_0}
 
 
 # Add CoreAPB3_0 instance
@@ -888,13 +958,34 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMA_L1_AXI_0:EXT_RES
 sd_instantiate_component -sd_name ${sd_name} -component_name {PF_OSC_0} -instance_name {PF_OSC_0}
 
 
-# Add reset_synchronizer_0 instance
-import_files -hdl_source ./import/hdl/reset_synchronizer.v
-build_design_hierarchy
-sd_instantiate_hdl_module -sd_name ${sd_name} -hdl_module_name {reset_synchronizer} -hdl_file {hdl\reset_synchronizer.v} -instance_name {reset_synchronizer_0}
+# Add PF_INIT_MONITOR_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {PF_INIT_MONITOR_0} -instance_name {PF_INIT_MONITOR_0} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_FROM_SPI_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:PCIE_INIT_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:USRAM_INIT_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:XCVR_INIT_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:USRAM_INIT_FROM_SNVM_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:USRAM_INIT_FROM_UPROM_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:USRAM_INIT_FROM_SPI_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_FROM_UPROM_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_FROM_SNVM_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:AUTOCALIB_DONE} 
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:FABRIC_POR_N}
+# ####################################
 
+
+# Add CORERESET_PF_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {CORERESET_PF_0} -instance_name {CORERESET_PF_0} 
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_0:BANK_x_VDDI_STATUS} -value {VCC} 
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_0:BANK_y_VDDI_STATUS} -value {VCC} 
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_0:SS_BUSY} -value {GND} 
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_0:FF_US_RESTORE} -value {GND} 
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_0:FPGA_POR_N} -value {GND}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CORERESET_PF_0:PLL_POWERDOWN_B}
 
 # ########################################################################################
+
 
 # Create top level Ports
 sd_create_scalar_port -sd_name ${sd_name} -port_name {TDO} -port_direction {OUT}
@@ -905,15 +996,15 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {TMS} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {RX} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {TX} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USER_RST} -port_direction {IN}
-
 sd_create_bus_port -sd_name ${sd_name} -port_name {GPIO_IN} -port_direction {IN} -port_range {[7:0]}
 sd_create_bus_port -sd_name ${sd_name} -port_name {GPIO_OUT} -port_direction {OUT} -port_range {[7:0]}
 
 
 # Add scalar net connections
-sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_0:ACLK" "COREAXITOAHBL_1:ACLK" "COREAXITOAHBL_0:HCLK" "COREAXITOAHBL_1:HCLK" "reset_synchronizer_0:clock" "CCC_0:OUT0_FABCLK_0" "CoreAHBLite_0:HCLK" "GPIO_IN_0:PCLK" "CoreTimer_0:PCLK" "CoreTimer_1:PCLK" "CoreUARTapb_0:PCLK" "GPIO_OUT_0:PCLK" "COREAHBTOAPB3_0:HCLK" "MIV_RV32IMA_L1_AXI_0:CLK" "PF_SRAM_0:HCLK" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"reset_synchronizer_0:reset" "AND2_0:Y" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:A" "CCC_0:PLL_LOCK_0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_0:ACLK" "COREAXITOAHBL_1:ACLK" "COREAXITOAHBL_0:HCLK" "COREAXITOAHBL_1:HCLK" "CORERESET_PF_0:CLK" "PF_CCC_0:OUT0_FABCLK_0" "CoreAHBLite_0:HCLK" "GPIO_IN_0:PCLK" "CoreTimer_0:PCLK" "CoreTimer_1:PCLK" "CoreUARTapb_0:PCLK" "GPIO_OUT_0:PCLK" "COREAHBTOAPB3_0:HCLK" "MIV_RV32IMA_L1_AXI_0:CLK" "PF_SRAM_0:HCLK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"USER_RST" "CORERESET_PF_0:EXT_RST_N"} 
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_PF_0:INIT_DONE" "PF_INIT_MONITOR_0:DEVICE_INIT_DONE"}
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_CCC_0:PLL_LOCK_0" "CORERESET_PF_0:PLL_LOCK"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:IRQ[29]" "CoreTimer_0:TIMINT" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:IRQ[30]" "CoreTimer_1:TIMINT" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:TCK" "CoreJTAGDebug_0:TGT_TCK_0" }
@@ -921,8 +1012,8 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:TDI" "Core
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:TMS" "CoreJTAGDebug_0:TGT_TMS_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:TRST" "CoreJTAGDebug_0:TGT_TRSTB_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TGT_TDO_0" "MIV_RV32IMA_L1_AXI_0:TDO" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_OSC_0:RCOSC_160MHZ_GL" "CCC_0:REF_CLK_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_0:ARESETN" "COREAXITOAHBL_1:ARESETN" "COREAXITOAHBL_0:HRESETN" "COREAXITOAHBL_1:HRESETN" "reset_synchronizer_0:reset_sync" "CoreAHBLite_0:HRESETN" "GPIO_IN_0:PRESETN" "CoreTimer_0:PRESETn" "CoreTimer_1:PRESETn" "CoreUARTapb_0:PRESETN" "GPIO_OUT_0:PRESETN" "COREAHBTOAPB3_0:HRESETN" "MIV_RV32IMA_L1_AXI_0:RESETN" "PF_SRAM_0:HRESETN" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_OSC_0:RCOSC_160MHZ_GL" "PF_CCC_0:REF_CLK_0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_0:ARESETN" "COREAXITOAHBL_1:ARESETN" "COREAXITOAHBL_0:HRESETN" "COREAXITOAHBL_1:HRESETN" "CORERESET_PF_0:FABRIC_RESET_N" "CoreAHBLite_0:HRESETN" "GPIO_IN_0:PRESETN" "CoreTimer_0:PRESETn" "CoreTimer_1:PRESETn" "CoreUARTapb_0:PRESETN" "GPIO_OUT_0:PRESETN" "COREAHBTOAPB3_0:HRESETN" "MIV_RV32IMA_L1_AXI_0:RESETN" "PF_SRAM_0:HRESETN" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"RX" "CoreUARTapb_0:RX" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"TCK" "CoreJTAGDebug_0:TCK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"TDI" "CoreJTAGDebug_0:TDI" }
@@ -930,26 +1021,25 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"TDO" "CoreJTAGDebug_0:TDO" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"TMS" "CoreJTAGDebug_0:TMS" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"TRSTB" "CoreJTAGDebug_0:TRSTB" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"TX" "CoreUARTapb_0:TX" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:B" "USER_RST" }
 
 # Add bus net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"GPIO_IN" "GPIO_IN_0:GPIO_IN" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"GPIO_OUT_0:GPIO_OUT" "GPIO_OUT" }
 
 # Add bus interface net connections
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:APB_bif" "CoreAPB3_0:APBmslave1" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"GPIO_IN_0:APB_bif" "CoreAPB3_0:APBmslave2" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_0:APBslave" "CoreAPB3_0:APBmslave3" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:APBslave" "CoreAPB3_0:APBmslave4" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"GPIO_OUT_0:APB_bif" "CoreAPB3_0:APBmslave5" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APB3mmaster" "COREAHBTOAPB3_0:APBmaster" }
-
 sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_0:AHBMasterIF" "CoreAHBLite_0:AHBmmaster0"}
 sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_1:AHBMasterIF" "CoreAHBLite_0:AHBmmaster1"}
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAHBLite_0:AHBmslave7" "COREAHBTOAPB3_0:AHBslave"}
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAHBLite_0:AHBmslave8" "PF_SRAM_0:AHBSlaveInterface"}
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MEM_MST_AXI" "COREAXITOAHBL_1:AXI_MM_IF"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MMIO_MST_AXI" "COREAXITOAHBL_0:AXI_MM_IF"} 
+
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:APB_bif" "CoreAPB3_0:APBmslave1" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"GPIO_IN_0:APB_bif" "CoreAPB3_0:APBmslave2" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_0:APBslave" "CoreAPB3_0:APBmslave3" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:APBslave" "CoreAPB3_0:APBmslave4" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"GPIO_OUT_0:APB_bif" "CoreAPB3_0:APBmslave5" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APB3mmaster" "COREAHBTOAPB3_0:APBmaster" }
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
