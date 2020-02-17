@@ -1,1 +1,1 @@
-set_location -inst_name {CCC_0_inst_0/CCC_0_0/pll_inst_0} -location PLL0_SE
+set_location -inst_name {PF_CCC_0_inst_0/PF_CCC_0_0/pll_inst_0} -location PLL0_SE

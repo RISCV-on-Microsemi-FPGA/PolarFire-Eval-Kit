@@ -17,7 +17,7 @@ The FPGA designs include the following features:
 * RISC-V debug block allowing on-target debug using openocd/GDB
 * LSRAM for code/data
 * User peripherals such as GPIO, Timers, UART
-* Designs created with Libero v12.1
+* Designs created with Libero v12.3
 
 #### Projects
 A choice of two Libero projects, each containing either MiV Core:
