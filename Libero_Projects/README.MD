@@ -2,12 +2,12 @@
 
 Sample Mi-V Libero projects for the PolarFire (MPF300T and MPF300T_ES) Evaluation Kits.
 
-To get your design download or clone this repository. The .tcl script file needs to be executed in Libero to build the design using the import folder data. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided in FlashPro_Express_Projects. They are found in the FlashPro Express Project's folder, instructions on programming are also listed below.
+To get your design download or clone this repository. The files consist of .tcl script files that are to be executed in Libero to build the design, the import folder contatining supporting files for building and the programming file which can be used to directly program hardware. Follow the instructions below to build your design in Libero, alternatively program your target device using the default programming files provided, see FlashPro Express Project's folder.
 
 **Note**: 
 * Unpack repository files to your main Microsemi folder e.g. C:\Microsemi\ to keep the file path short, as the project requires
 a lengthy file path and some OS systems have limits. **Not providing
-a sufficient file path for the project will result in errors**.
+a sufficient file path for the project will result in errors (e.g. PF_SRAM_0 or SRAM_0 not found.)**.
 * Make sure you have the latest Libero Cores in your vault. Select Catalog tab from the left hand side toolbar and check if the "Download Latest Cores" option is available by a yellow marked area then click it. This option will only be visible if you don't have the lates cores in the vault. If the vault hasn't been updated in a while this could take some time. Not having the library of cores required for the design to be built will cause errors.
 
 

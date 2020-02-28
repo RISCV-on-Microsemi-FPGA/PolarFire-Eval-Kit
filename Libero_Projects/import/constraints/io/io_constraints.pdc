@@ -34,40 +34,41 @@ set_io -port_name {GPIO_IN[1]}  \
     -DIRECTION INPUT
 
 
-set_io -port_name {GPIO_IN[2]}  \
-    -pin_name H24               \
-    -fixed true                 \
-    -DIRECTION INPUT
+# Additional GPIOs
+# set_io -port_name {GPIO_IN[2]}  \
+    # -pin_name H24               \
+    # -fixed true                 \
+    # -DIRECTION INPUT
 
 
-set_io -port_name {GPIO_IN[3]}  \
-    -pin_name C22               \
-    -fixed true                 \
-    -DIRECTION INPUT
+# set_io -port_name {GPIO_IN[3]}  \
+    # -pin_name C22               \
+    # -fixed true                 \
+    # -DIRECTION INPUT
 
 
-set_io -port_name {GPIO_IN[4]}  \
-    -pin_name B21               \
-    -fixed true                 \
-    -DIRECTION INPUT
+# set_io -port_name {GPIO_IN[4]}  \
+    # -pin_name B21               \
+    # -fixed true                 \
+    # -DIRECTION INPUT
 
 
-set_io -port_name {GPIO_IN[5]}  \
-    -pin_name G20               \
-    -fixed true                 \
-    -DIRECTION INPUT
+# set_io -port_name {GPIO_IN[5]}  \
+    # -pin_name G20               \
+    # -fixed true                 \
+    # -DIRECTION INPUT
 
 
-set_io -port_name {GPIO_IN[6]}  \
-    -pin_name F24               \
-    -fixed true                 \
-    -DIRECTION INPUT
+# set_io -port_name {GPIO_IN[6]}  \
+    # -pin_name F24               \
+    # -fixed true                 \
+    # -DIRECTION INPUT
 
 
-set_io -port_name {GPIO_IN[7]}  \
-    -pin_name F25               \
-    -fixed true                 \
-    -DIRECTION INPUT
+# set_io -port_name {GPIO_IN[7]}  \
+    # -pin_name F25               \
+    # -fixed true                 \
+    # -DIRECTION INPUT
 
 
 set_io -port_name {GPIO_OUT[0]}  \
@@ -94,28 +95,29 @@ set_io -port_name {GPIO_OUT[3]}  \
     -DIRECTION OUTPUT
 
 
-set_io -port_name {GPIO_OUT[4]}  \
-    -pin_name C27                \
-    -fixed true                  \
-    -DIRECTION OUTPUT
+# Additional GPIOs
+# set_io -port_name {GPIO_OUT[4]}  \
+    # -pin_name C27                \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
 
 
-set_io -port_name {GPIO_OUT[5]}  \
-    -pin_name F23                \
-    -fixed true                  \
-    -DIRECTION OUTPUT
+# set_io -port_name {GPIO_OUT[5]}  \
+    # -pin_name F23                \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
 
 
-set_io -port_name {GPIO_OUT[6]}  \
-    -pin_name H22                \
-    -fixed true                  \
-    -DIRECTION OUTPUT
+# set_io -port_name {GPIO_OUT[6]}  \
+    # -pin_name H22                \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
 
 
-set_io -port_name {GPIO_OUT[7]}  \
-    -pin_name H21                \
-    -fixed true                  \
-    -DIRECTION OUTPUT
+# set_io -port_name {GPIO_OUT[7]}  \
+    # -pin_name H21                \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
 
 
 set_io -port_name RX  \
