@@ -4,7 +4,7 @@ Sample Mi-V Libero projects for the PolarFire (MPF300T and MPF300T_ES) Evaluatio
 This repository containts Libero projects for FPGA designs including a RISC-V soft processor.
 The Programming bitstream(s) are also included so that you do not need to run through the full FPGA design flow in order to start developing software for RISC-V.
 
-### Libero
+### Libero Projects
 --------------------
 The Libero_Projects folder contains the .tcl scripts that build the Libero design projects. Libero is Microsemi's FPGA design tool. You will need this tool if you wish to modify the sample Libero FPGA designs. Libero is available 
 [here](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads).
