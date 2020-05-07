@@ -18,7 +18,7 @@ source ./import/components/SHARED_COMPONENTS/CoreRESET_PF_0.tcl
 source ./import/components/SHARED_COMPONENTS/CoreTimer_0.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreTimer_1.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreUARTapb_0.tcl 
-source ./import/components/SHARED_COMPONENTS/MIV_RV32IMAF_L1_AHB_0.tcl 
+source ./import/components/SHARED_COMPONENTS/MiV_RV32IMAF_L1_AHB_0.tcl 
 source ./import/components/SHARED_COMPONENTS/PF_CCC_0.tcl 
 source ./import/components/SHARED_COMPONENTS/PF_INIT_MONITOR_0.tcl 
 source ./import/components/SHARED_COMPONENTS/PF_OSC_0.tcl 
@@ -121,7 +121,7 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CoreUARTapb_0:FRAMING_ERR}
 
 
 # Add MiV_RV32IMAF_L1_AHB_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {MIV_RV32IMAF_L1_AHB_0} -instance_name {MiV_RV32IMAF_L1_AHB_0}
+sd_instantiate_component -sd_name ${sd_name} -component_name {MiV_RV32IMAF_L1_AHB_0} -instance_name {MiV_RV32IMAF_L1_AHB_0}
 sd_create_pin_slices -sd_name ${sd_name} -pin_name {MiV_RV32IMAF_L1_AHB_0:IRQ} -pin_slices {[28:0]}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {MiV_RV32IMAF_L1_AHB_0:IRQ[28:0]} -value {GND}
 sd_create_pin_slices -sd_name ${sd_name} -pin_name {MiV_RV32IMAF_L1_AHB_0:IRQ} -pin_slices {[29]}
