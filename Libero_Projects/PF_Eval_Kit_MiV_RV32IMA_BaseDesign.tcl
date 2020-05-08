@@ -10,19 +10,17 @@ set config [string toupper [lindex $argv 0]]
 set design_flow_stage [string toupper [lindex $argv 1]]
 
 
-proc create_new_project_label {Libero_project_name}\
+proc create_new_project_label { }\
 {
 	puts "\n ---------------------------------------------------------------------------------------------------------"
-	puts "Creating New Project"
-	puts "Project name is: '${Libero_project_name}'"
+	puts "Creating a new project for the 'PF_Eval_Kit' board."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 }
 
-proc project_exists {Libero_project_name}\
+proc project_exists { }\
 {
 	puts "\n ---------------------------------------------------------------------------------------------------------"
-	puts "Error: Project '${Libero_project_name}' already exists."
-	puts "Please rename or remove the project, then re-run the script."
+	puts "Error: A project exists for the 'PF_Eval_Kit' with this configuration."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 }
 
@@ -79,9 +77,9 @@ proc run_verify_timing { }\
 
 if {"$config" == "CFG1"} then {
 	if {[file exists $project_dir_CFG1] == 1} then {
-		project_exists $Libero_project_name_CFG1
+		project_exists
 	} else {
-		create_new_project_label $Libero_project_name_CFG1
+		create_new_project_label
 		new_project -location $project_dir_CFG1 -name $Libero_project_name_CFG1 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300T} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:IND}
 		source ./import/components/IMA_CFG1/import_component_and_constraints_pf_eval_kits_rv32ima_cfg1.tcl
 		save_project
@@ -89,9 +87,9 @@ if {"$config" == "CFG1"} then {
 	}
 } elseif {"$config" == "CFG2"} then {
 	if {[file exists $project_dir_CFG2] == 1} then {
-		project_exists $Libero_project_name_CFG2
+		project_exists
 	} else {
-		create_new_project_label $Libero_project_name_CFG2
+		create_new_project_label
 		new_project -location $project_dir_CFG2 -name $Libero_project_name_CFG2 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300T} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:IND}
 		source ./import/components/IMA_CFG2/import_component_and_constraints_pf_eval_kits_rv32ima_cfg2.tcl
 		save_project
@@ -101,10 +99,10 @@ if {"$config" == "CFG1"} then {
 		invalid_first_argument
 } else {
 	if {[file exists $project_dir_CFG1] == 1} then {
-		project_exists $Libero_project_name_CFG1
+		project_exists
 	} else {
 		no_first_argument_entered
-		create_new_project_label $Libero_project_name_CFG1
+		create_new_project_label
 		new_project -location $project_dir_CFG1 -name $Libero_project_name_CFG1 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300T} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:IND}
 		source ./import/components/IMA_CFG1/import_component_and_constraints_pf_eval_kits_rv32ima_cfg1.tcl
 		save_project
