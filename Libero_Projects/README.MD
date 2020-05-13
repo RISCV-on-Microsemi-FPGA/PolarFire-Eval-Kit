@@ -2,7 +2,7 @@
 This folder contains Tcl scripts that build Libero SoC v12.4 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
 
-###### (Board-Name)-MiV_RV32IMA_BaseDesign
+###### PF_Eval_Kit_MiV_RV32IMA_BaseDesign (or ES equivalent)
 
 | Config  | Description |
 | :------:|:------------|
@@ -10,7 +10,7 @@ This folder contains Tcl scripts that build Libero SoC v12.4 design projects for
 | CFG2    |This design uses the MiV_RV32IMA_L1_AHB core with an **AXI3** interface for memory and peripherals|
 
 
-###### (Board-Name)-MiV_RV32IMAF_BaseDesign
+###### PF_Eval_Kit_MiV_RV32IMAF_BaseDesign (or ES equivalent)
 
 | Config  |Description |
 | :------:|:-----------|
@@ -18,7 +18,7 @@ This folder contains Tcl scripts that build Libero SoC v12.4 design projects for
 
 
 
-###### (Board-Name)-MiV_RV32IMC_BaseDesign
+###### PF_Eval_Kit_MiV_RV32IMC_BaseDesign (or ES equivalent)
 
 
 | Config  | Description|
