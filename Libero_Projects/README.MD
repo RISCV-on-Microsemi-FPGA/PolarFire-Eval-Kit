@@ -2,7 +2,7 @@
 This folder contains Tcl scripts that build Libero SoC v12.4 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
 
-###### PF_Eval_Kit_MiV_RV32IMA_BaseDesign (or ES equivalent)
+#### PF_Eval_Kit_MiV_RV32IMA_BaseDesign (or ES equivalent)
 
 | Config  | Description |
 | :------:|:------------|
@@ -10,7 +10,7 @@ This folder contains Tcl scripts that build Libero SoC v12.4 design projects for
 | CFG2    |This design uses the MiV_RV32IMA_L1_AXI core with an **AXI3** interface for memory and peripherals|
 
 
-###### PF_Eval_Kit_MiV_RV32IMAF_BaseDesign (or ES equivalent)
+#### PF_Eval_Kit_MiV_RV32IMAF_BaseDesign (or ES equivalent)
 
 | Config  |Description |
 | :------:|:-----------|
@@ -18,7 +18,7 @@ This folder contains Tcl scripts that build Libero SoC v12.4 design projects for
 
 
 
-###### PF_Eval_Kit_MiV_RV32IMC_BaseDesign (or ES equivalent)
+#### PF_Eval_Kit_MiV_RV32IMC_BaseDesign (or ES equivalent)
 
 
 | Config  | Description|
@@ -58,13 +58,13 @@ Libero executes the script and opens the Mi-V sample project. The script adds Ti
 ## <a name="Script arguments"></a> Script Arguments
 In the examples above the arguments "CFG1" and "CFG1 SYNTHESIZE" were entered. The complete set of script arguments are documented here.
 
-First argument:
+#### First argument:
 | Argument                  |  Description   |
 | ------------------------- |:---------------|
 | CFG1..CFGn                | Generate a sample design for the selected configuration  |
 
 
-Second argument:
+#### Second argument:
 | Argument                  |  Description   |
 | ------------------------- |:---------------|
 | SYNTHESIZE                | Run synthesis on the design  |

@@ -49,7 +49,7 @@ proc invalid_second_argument { }\
 {
 	puts "\n ---------------------------------------------------------------------------------------------------------"
     puts "Wrong 2nd Argument has been entered."
-    puts "Make sure you enter a valid first argument -'Synthesize...Export_Programming_File'."
+    puts "Make sure you enter a valid 2nd argument -'Synthesize...Export_Programming_File'."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 }
 
