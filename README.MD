@@ -30,8 +30,8 @@ The Libero designs include the following features:
 
 ## Target Hardware
 Details of the PolarFire Evaluation Kit and it's features can be found:
-* [MPF300-EVAL-KIT](https://www.microsemi.com/existing-parts/parts/150789)(MPF300TS)
-* [MPF300-EVAL-KIT-ES](https://www.microsemi.com/existing-parts/parts/138273)(MPF300TS_ES)
+* [MPF300-EVAL-KIT](https://www.microsemi.com/existing-parts/parts/150789) (MPF300TS)
+* [MPF300-EVAL-KIT-ES](https://www.microsemi.com/existing-parts/parts/138273) (MPF300TS_ES)
 
 # FlashPro Express
 The FlashPro_Express_Projects folder contains the pre-generated programming files, which can be downloaded directly to the target board using FlashPro Express.
@@ -48,4 +48,4 @@ available as a standalone application. Please note, that if Libero SoC is alread
 the standalone version.
 
 ## SoftConsole
-[SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole)is Microsemi’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microsemi CPU and SoC based FPGAs. It provides development and debug support for all Microsemi SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
+[SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole) is Microsemi’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microsemi CPU and SoC based FPGAs. It provides development and debug support for all Microsemi SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
