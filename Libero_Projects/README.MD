@@ -1,5 +1,5 @@
 # PolarFire Evaluation Kit Mi-V Sample FPGA Designs
-This folder contains Tcl scripts that build Libero SoC v12.4 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
+This folder contains Tcl scripts that build Libero SoC v12.5 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
 
 #### PF_Eval_Kit_MiV_RV32IMA_BaseDesign (or ES equivalent)
