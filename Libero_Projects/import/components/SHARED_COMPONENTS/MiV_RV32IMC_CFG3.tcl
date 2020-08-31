@@ -37,7 +37,7 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMC:2.1.100} -compon
 "RESET_VECTOR_ADDR_0:0x0"  \
 "RESET_VECTOR_ADDR_1:0x8000"  \
 "TCM_DAP_PRESENT:false"  \
-"TCM_END_ADDR_0:0x8000"  \
+"TCM_END_ADDR_0:0x7fff"  \
 "TCM_END_ADDR_1:0x8000"  \
 "TCM_PRESENT:true"  \
 "TCM_START_ADDR_0:0x0"  \

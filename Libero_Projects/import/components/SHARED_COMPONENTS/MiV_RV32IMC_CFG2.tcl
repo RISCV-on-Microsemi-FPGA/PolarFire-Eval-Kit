@@ -13,8 +13,8 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMC:2.1.100} -compon
 "APB_SLAVE_MIRROR:false"  \
 "APB_START_ADDR_0:0x0"  \
 "APB_START_ADDR_1:0x7000"  \
-"AXI_END_ADDR_0:0xffff"  \
-"AXI_END_ADDR_1:0x8fff"  \
+"AXI_END_ADDR_0:0x7fff"  \
+"AXI_END_ADDR_1:0x8000"  \
 "AXI_MASTER_TYPE:2"  \
 "AXI_SLAVE_MIRROR:true"  \
 "AXI_START_ADDR_0:0x0"  \
