@@ -13,7 +13,7 @@ To download or clone the repository:
     $ git clone https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit.git
 
     $ Running from the zipped sources
-    1. Download the zipped sources via the "Clone or download" button using "Download Zip" button
+    1. Download the zipped sources via the "Code" button using "Download Zip" button
     2. Unzip the sources
 
 
