@@ -1,6 +1,6 @@
 # Exporting core PF_SRAM_AXI4_0 to TCL
 # Create design TCL command for core PF_SRAM_AXI4_0
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.2.105} -component_name {PF_SRAM_AXI4_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.2.108} -component_name {PF_SRAM_AXI4_0} -params {\
 "AXI4_AWIDTH:32" \
 "AXI4_DWIDTH:32" \
 "AXI4_IDWIDTH:8" \
@@ -17,9 +17,9 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.2.1
 "INIT_RAM:F" \
 "LPM_HINT:0" \
 "PIPELINE_OPTIONS:1" \
-"RDEPTH:65536" \
+"RDEPTH:32768" \
 "RWIDTH:40" \
 "USE_NATIVE_INTERFACE:F" \
-"WDEPTH:65536" \
+"WDEPTH:32768" \
 "WWIDTH:40" }
 # Exporting core PF_SRAM_0 to TCL done

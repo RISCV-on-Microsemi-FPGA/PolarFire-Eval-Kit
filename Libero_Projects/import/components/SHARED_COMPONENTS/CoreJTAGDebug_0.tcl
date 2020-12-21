@@ -18,7 +18,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:3.1.100} -c
 "IR_CODE_TGT_14:0x63"  \
 "IR_CODE_TGT_15:0x64"  \
 "NUM_DEBUG_TGTS:1"  \
-"TGT_ACTIVE_HIGH_RESET_0:true"  \
+"TGT_ACTIVE_HIGH_RESET_0:false"  \
 "TGT_ACTIVE_HIGH_RESET_1:true"  \
 "TGT_ACTIVE_HIGH_RESET_2:true"  \
 "TGT_ACTIVE_HIGH_RESET_3:true"  \

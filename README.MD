@@ -1,10 +1,10 @@
 ## PolarFire Evaluation Kit Mi-V Sample Designs
 
 This repository contains Libero projects for the following soft core RISC-V processors:
+* MIV_RV32
 * MIV_RV32IMA_L1_AHB
 * MIV_RV32IMA_L1_AXI
-* MiV_RV32IMAF_L1_AHB
-* MiV_RV32IMC
+* MIV_RV32IMAF_L1_AHB
 
 FlashPro Express projects containing pre-generated programming files are also available for each of the designs.
 
@@ -13,25 +13,25 @@ To download or clone the repository:
     $ git clone https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit.git
 
     $ Running from the zipped sources
-    1. Download the zipped sources via the "Clone or download" button using "Download Zip" button
+    1. Download the zipped sources via the "Code" button using "Download Zip" button
     2. Unzip the sources
 
 
 # Libero Projects
-The Libero_Projects folder contains sample Mi-V Libero designs.
+The Libero_Projects folder contains sample Mi-V Libero designs for Libero v12.6. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/RISCV-on-Microsemi-FPGA/Future-Avalanche-Board/releases) in this repository.
 
 ## Design Features
 The Libero designs include the following features:
 * A soft RISC-V [processor](https://github.com/RISCV-on-Microsemi-FPGA/CPUs)
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * The operating frequency of the design is 50MHz
-* Target memory is RAM
-* User peripherals (GPIO, Timers, UART)
+* Target memory is SRAM (32kB)
+* User peripherals: 2 Timers, UART, 2 GPIO Inputs and 4 GPIO Outputs (GPIOs use fixed configs for simplicity and better resource utilization)
 
 ## Target Hardware
 Details of the PolarFire Evaluation Kit and it's features can be found:
-* MPF300-EVAL-KIT (MPF300T) [here](https://www.microsemi.com/existing-parts/parts/150789)
-* MPF300-EVAL-KIT-ES (MPF300T_ES) [here](https://www.microsemi.com/existing-parts/parts/138273).
+* [MPF300-EVAL-KIT](https://www.microsemi.com/existing-parts/parts/150789) (MPF300TS)
+* [MPF300-EVAL-KIT-ES](https://www.microsemi.com/existing-parts/parts/138273) (MPF300TS_ES)
 
 # FlashPro Express
 The FlashPro_Express_Projects folder contains the pre-generated programming files, which can be downloaded directly to the target board using FlashPro Express.
@@ -39,17 +39,13 @@ The FlashPro_Express_Projects folder contains the pre-generated programming file
 # Design Tools
 The following design tools are required.
 
-## Libero SoC v12.4
-Libero SoC is Microsemi's FPGA design software.
-It is available from [here](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads).
+## Libero SoC v12.6
+[Libero SoC](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads) is Microchip's FPGA design software.
 
 ## FlashPro Express
-FlashPro Express is Microsemi's Programming and debug tool. It is included in the Libero SoC software and is also
-available as a standalone application found [here](http://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software). Please note, that if Libero SoC is already on your system, you do not need
+[FlashPro Express](http://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software) is Microchip's Programming and debug tool. It is included in the Libero SoC software and is also
+available as a standalone application. Please note, that if Libero SoC is already on your system, you do not need
 the standalone version.
 
 ## SoftConsole
-SoftConsole is Microsemi’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microsemi CPU and SoC based FPGAs. It provides development and debug support for all Microsemi SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded [here](https://www.microsemi.com/product-directory/design-tools/4879-softconsole).  
-
-### SoftConsole Projects
-A set of RISC-V example software projects are also available for these designs from the SoftConsole [page](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole).
+[SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole) is Microchip’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microchip CPU and SoC based FPGAs. It provides development and debug support for all Microchip SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
