@@ -1,6 +1,6 @@
 # Exporting core CoreUARTapb_0 to TCL
 # Exporting Create design command for core CoreUARTapb_0
-create_and_configure_core -core_vlnv {Actel:DirectCore:CoreUARTapb:5.6.102} -component_name {CoreUARTapb_0} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:CoreUARTapb:5.7.100} -component_name {CoreUARTapb_0} -params {\
 "BAUD_VAL_FRCTN:0"  \
 "BAUD_VAL_FRCTN_EN:false"  \
 "BAUD_VALUE:1"  \

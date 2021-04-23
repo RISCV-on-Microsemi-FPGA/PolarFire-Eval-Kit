@@ -1,6 +1,6 @@
 # Exporting core CoreAHBL_0 to TCL
 # Exporting Create design command for core CoreAHBL_0
-create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAHBLite:5.4.102} -component_name {CoreAHBL_0} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAHBLite:5.5.101} -component_name {CoreAHBL_0} -params {\
 "HADDR_SHG_CFG:1"  \
 "M0_AHBSLOT0ENABLE:false"  \
 "M0_AHBSLOT1ENABLE:false"  \
