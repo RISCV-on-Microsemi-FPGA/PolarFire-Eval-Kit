@@ -60,6 +60,16 @@ proc  base_design_built { }\
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 }
 
+proc  legacy_core_msg { }\
+{
+	puts "\n---------------------------------------------------------------------------------------------------------"
+    puts "This Libero design uses a legacy Mi-V soft processor core. Legacy Mi-V soft processors"
+	puts "are not recommended for new designs. "
+	puts ""
+	puts "MIV_RV32 is recommended for new designs."
+	puts "--------------------------------------------------------------------------------------------------------- \n"
+}
+
 proc download_cores_all_cfgs  { }\
 {
 	download_core -vlnv {Actel:DirectCore:CoreUARTapb:5.7.100} -location {www.microchip-ip.com/repositories/DirectCore}
@@ -198,3 +208,4 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 } else {
 	no_second_argument_entered
 }
+legacy_core_msg
