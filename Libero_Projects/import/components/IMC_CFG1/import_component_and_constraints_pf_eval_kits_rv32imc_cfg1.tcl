@@ -1,4 +1,4 @@
-set project_folder_name MiV_CFG1_BD
+set project_folder_name MIV_CFG1_BD
 set project_dir2 "./$project_folder_name"
 
 puts "\n---------------------------------------------------------------------------------------------------------"
