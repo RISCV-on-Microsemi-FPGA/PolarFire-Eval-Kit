@@ -1,6 +1,6 @@
 # Exporting core PF_INIT_MONITOR_0 to TCL
 # Exporting Create design command for core PF_INIT_MONITOR_0
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_INIT_MONITOR:2.0.203} -component_name {PF_INIT_MONITOR_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_INIT_MONITOR:2.0.204} -component_name {PF_INIT_MONITOR_0} -params {\
 "BANK_0_CALIB_STATUS_ENABLED:false"  \
 "BANK_0_CALIB_STATUS_SIMULATION_DELAY:1"  \
 "BANK_0_RECALIBRATION_ENABLED:false"  \

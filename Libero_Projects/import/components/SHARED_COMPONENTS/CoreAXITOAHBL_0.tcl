@@ -1,6 +1,6 @@
 # Exporting core CoreAXITOAHBL_0 to TCL
 # Exporting Create design command for core CoreAXITOAHBL_0
-create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXITOAHBL:3.5.100} -component_name {CoreAXITOAHBL_0} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXITOAHBL:3.6.101} -component_name {CoreAXITOAHBL_0} -params {\
 "ASYNC_CLOCKS:false"  \
 "AXI_DWIDTH:64"  \
 "AXI_SEL_MM_S:1"  \
